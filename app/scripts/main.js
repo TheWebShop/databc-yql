@@ -71,7 +71,13 @@ function initializeMap() {
   var mapOptions = {
     center: new google.maps.LatLng(48.420617, -123.370871),
     zoom: 16,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    panControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.LARGE,
+        position: google.maps.ControlPosition.LEFT_CENTER
+    }
   };
   return new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 }
