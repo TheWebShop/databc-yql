@@ -1,0 +1,83 @@
+<!doctype html>
+<!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>TheWebShop | openData with YQL</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="apple-touch-icon" href="ydn-iphone.png" type="image/png">
+    <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="yql32.png">
+
+    <!-- build:css styles/main.css -->
+    <link href="styles/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+    <div id="map-canvas"></div>
+
+    <button id="open-tab" class="btn btn-inverse pull-right">Ajax&nbsp;Traffic</button>
+    <div id="info-panel">
+      <button id="close-tab" class="btn btn-inverse pull-right">Close</button>
+      <h2>Ajax traffic</h2>
+      <h3>Request</h3>
+      <pre id="request-window" class="language-markup"></pre>
+      <h3>Response</h3>
+      <div id="prettyprint-window"></div>
+    </div>
+
+    <!-- Performance warning -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Lowered expectations</h3>
+      </div>
+      <div class="modal-body">
+        <p>This demo is doing things no sane person would ever do in production. As such you may experience browser slowdown, map latency, or hot flashes.</p>
+        <p>Please be patient ☺</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Okay</button>
+      </div>
+    </div>
+
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?sensor=true"></script>
+
+  <!-- build:js scripts/plugins.js -->
+  <script src="components/jquery/jquery.js"></script>
+  <script src="components/sass-bootstrap/js/bootstrap-modal.js"></script>
+  <script src="components/prettyprint/prettyprint.js"></script>
+  <script src="components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js"></script>
+  <script src="vendor/neteye-activity-indicator.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
